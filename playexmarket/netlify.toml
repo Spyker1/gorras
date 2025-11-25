@@ -1,4 +1,4 @@
 [build]
-base = ""
+base = "playexmarket"
 publish = "dist"
 commmand = "npm run build"
