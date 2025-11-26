@@ -19,6 +19,7 @@ export const Header = () => {
     { name: 'Inicio', href: '/' },
     { name: 'Gorras', href: '/catalogo' },
     { name: 'Tenis', href: '/tenis' },
+    { name: 'Cuenta', href: '/crear' },
     { name: 'Perfumes', href: '/perfumes' },
   ];
 
@@ -76,9 +77,9 @@ export const Header = () => {
               <Search size={20} />
             </button>
             
-            <button className="hidden sm:block text-gray-600 hover:text-black transition-transform hover:scale-110">
+            <a href="/crear"><button className="hidden sm:block text-gray-600 hover:text-black transition-transform hover:scale-110">
               <User size={20} />
-            </button>
+            </button></a>
 
             <button className="relative text-gray-600 hover:text-black transition-transform hover:scale-110 group">
               <ShoppingCart size={20} />
