@@ -1,6 +1,6 @@
 "use client"
 import React from 'react';
-import Link from 'next/link'; // <--- IMPORTANTE: Importamos Link
+import Link from 'next/link';
 import { ArrowRight, Sparkles, Star, Zap, Truck, ShieldCheck } from 'lucide-react';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
@@ -81,19 +81,18 @@ export default function HomePage() {
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                {/* Usamos Link en lugar de <a> */}
                 <Link 
                   href="/catalogo"
                   className="bg-white text-black px-12 py-4 font-bold text-sm uppercase tracking-widest hover:bg-gray-200 transition-transform hover:scale-105 active:scale-95 flex items-center justify-center gap-2"
                 >
                   Ver Colección <ArrowRight size={18} />
                 </Link>
-                <Link 
+                {/* <Link 
                   href="/tenis"
                   className="bg-transparent border border-white text-white px-12 py-4 font-bold text-sm uppercase tracking-widest hover:bg-white hover:text-black transition-colors flex items-center justify-center"
                 >
                   Sneakers
-                </Link>
+                </Link> */}
               </div>
             </FadeIn>
           </div>
@@ -156,7 +155,6 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* PRODUCTOS DESTACADOS - AQUÍ ESTABA EL PROBLEMA */}
         <section className="py-20 bg-neutral-50 border-t border-gray-200">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <FadeIn>
@@ -169,7 +167,6 @@ export default function HomePage() {
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-12">
               {featuredProducts.map((product, idx) => (
                 <FadeIn key={product.id} delay={idx * 100}>
-                  {/* Usamos LINK para navegación correcta en Next.js */}
                   <Link 
                     href={`/producto/${product.id}`} 
                     className="group cursor-pointer block"
