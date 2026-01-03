@@ -77,7 +77,7 @@ export const Header = () => {
               <Search size={20} />
             </button>
             
-            <a href="/crear"><button className="hidden sm:block text-gray-600 hover:text-black transition-transform hover:scale-110">
+            <a href="/catalogo"><button className="hidden sm:block text-gray-600 hover:text-black transition-transform hover:scale-110">
               <User size={20} />
             </button></a>
 
